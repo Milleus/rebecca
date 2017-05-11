@@ -6,7 +6,7 @@ Rebecca gives authorized ssh access to another user's mac PC.
 Rebecca consist of two scripts, one to add rsa public key into the authorized_keys of the user's mac PC and email relevant information for ssh to a third party mailbox. The other to remove rsa public key from the authorized_keys of the user's mac PC.
 
 ## Why Rebecca was created?
-Rebecca was created to explore and experiment with rsa key pairs, also for a little office fun :smirk:.
+Rebecca was created for fun :smirk:.
 
 With ssh access, one can make a mac talk to the user, launch random browsers, sleep the mac PC, etc. Some interesting commands to play with:
 ```

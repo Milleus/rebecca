@@ -10,9 +10,10 @@ Rebecca was created for fun :smirk:.
 
 With ssh access, one can make a mac talk to the user, launch random browsers, sleep the mac PC, etc. Some interesting commands to play with:
 ```
-say "hello world"
+say -v veena hello world
 open "http://google.com"
 pmset sleepnow
+echo "alias ls='say -v veena hello, why are you touching me'" >> ~/.bash_profile
 ```
 
 ## How to use Rebecca?

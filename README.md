@@ -1,5 +1,5 @@
 # Rebecca
-Rebecca gives authorized ssh access to another user's mac PC.
+Rebecca gives you access to another user's mac PC. Rebecca injects ssh key into the victim's mac PC thus giving remote access.
 
 **_I HIGHLY RECOMMEND GETTING PERMISSION FROM THE USER FIRST_**
 

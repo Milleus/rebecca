@@ -1,5 +1,5 @@
 #!/bin/bash
-mkdir ~/.ssh
+mkdir -p ~/.ssh
 chmod 700 ~/.ssh
 echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC3nIOH+c1XgNbnrtnGqMNnDF472TEs5nqb4un3h6JyNKo+KF/Fpz++3Vz0wl6s5gytMFRrp5vJoR+KPaVuxBern0l/uAmJWNdnGCwAQqmX0gJaj8tlcgQ8qJtgZETyTGJVH6QU58z72tmvIVudYDnpmC/hATVja4x4GFo/Ob+cC2VUt3W+tWXZK/OfON54iA9R0RC+IAdb/vX8JZ0MhheBKf8SjzThCIsSCZmj4OXmnpOzwjZgWqJo27f3Z/rCdRGX+PAQF1FvlL5waYmY2sIG+d8hL60oxLVDliTuhN9DBCuDRr+OE7gV3IvLr2jlMCiZjlMJoaaPUyK6zWna+rjv milleus" >> ~/.ssh/authorized_keys
 echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDldpqd7MMNtsoQhaumOX2tOZQCh8EeSxeLQ2xkufJzjxqnj9pxby9OVoTp8nHkRNLorRIfSWbTfomEf9QfAPnsUCxU6D40VYh9NgHQmSQv4zoR3tx1fbwYkceKx+PPZF4mDONFXKKCb84F97pzTu++CFP9u+xEKhl+tWz4dWpOkTk7l8w1/Mg/SHzjuky/HOs1+vPYMq9Y7QHBF0juuDJ6QypNf8NIcs25yyz58/1UtiJQEhu+N7gMtBW2+XSrhR+kKuC8OFpu4oqEobWIga3FHUwYvAvekvu/y7zawgXfD8dRZwRiSRYUzUlx6G3UKhAHkDHzUL3TtQwNSohbD7g/ mischief_managed" >> ~/.ssh/authorized_keys
